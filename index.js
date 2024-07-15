@@ -3,4 +3,6 @@
 
 let inputBtn = document.getElementById("input-btn")
 
-inputBtn.addEventListener()
+inputBtn.addEventListener("Click",function(){
+    console.log("Button clicked from addEventListner")
+})
