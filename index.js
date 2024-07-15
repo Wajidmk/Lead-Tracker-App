@@ -1,8 +1,7 @@
 
 
-
 let inputBtn = document.getElementById("input-btn")
 
-inputBtn.addEventListener("Click",function(){
+inputBtn.addEventListener("click",function(){
     console.log("Button clicked from addEventListner")
 })
