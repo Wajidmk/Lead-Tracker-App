@@ -32,11 +32,13 @@ function render(leads) {
                 </a>
             </li>
         `
-    }
-    ulEl.innerHTML = listItems
+}
+ulEl.innerHTML = listItems   
 }
 onValue(referenceInDB, function(snapshot) {
-    console.log(snapshot.val())
+   const snapshotValue =  snapshot.val()
+   const leads=Object.value(snapshotValue)
+   render(leads)
 })
 
 deleteBtn.addEventListener("dblclick", function() {
