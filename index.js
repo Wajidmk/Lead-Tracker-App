@@ -1,5 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
+import { getDatabase,
+     ref,
+     push,
+     onValue,
+     remove } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
 
 const firebaseConfig = {
     databaseURL: "https://leads-tracker-app-77d51-default-rtdb.asia-southeast1.firebasedatabase.app/"
@@ -39,6 +43,7 @@ onValue(referenceInDB, (snapshot) => {
 });
 
 deleteBtn.addEventListener("dblclick", () => {
+    remove(referenceInDB)
     // Handle delete functionality here
 });
 
